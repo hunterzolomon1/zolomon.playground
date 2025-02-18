@@ -315,16 +315,6 @@ setInterval(()=>{
 },1000)
 
 
-loginpage = document.getElementById('loginpage')
-loginpage.addEventListener('keydown',(event)=>{
-    if (event.key=="Enter"){
-        enterpassword()
-    }
-})
-
-
-let random_pass = document.getElementById('randompassword')
-random_pass.innerHTML = get_random_pass()
 
 
 
