@@ -271,26 +271,6 @@ function detectmousemotion(e){
 }
 
 
-function enterpassword(){
-    password = document.getElementById('passwordinput').value
-    rightpassword = document.getElementById('randompassword').innerHTML
-    if (password == rightpassword){
-        document.getElementById('loginpage').remove();
-        notification('https://win11.blueedge.me/img/icon/home.png','Welcome to Zolomon Playground')
-    }else{
-        document.getElementById('passwordinput').value = "wrong password"
-    }
-}
-
-function get_random_pass(){
-    letters = ["a",'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    pass = ""
-    for (let i = 0; i < 5; i++){
-        pass += letters[Math.floor(Math.random()*letters.length)]
-    }
-    return pass;
-}
-
 
 function notification(icon,text)
 {
