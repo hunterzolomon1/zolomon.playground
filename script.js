@@ -424,7 +424,7 @@ desktop.addEventListener('click',()=>{
 desktopapps = [
     {
         url:"https://eaglercraft.com/mc/1.8.8/",
-        icon:"https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c2fa.png",
+        icon:"https://img.icons8.com/?size=512&id=XfjNd4vkhBBy&format=png",
         title:"Minecraft"
     },
     {
