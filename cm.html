@@ -1,0 +1,102 @@
+<html>
+<head>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font: icon;
+            font-size: 20px;
+        }
+        .pl{
+            float: left;
+        }
+        #promptline{
+            width: fit-content;
+            height: fit-content;
+            overflow: auto;
+            scrollbar-width: none;
+            border: none;
+            margin: none;
+            padding: none;
+        }
+    </style>
+    <script>
+        var history = {}
+        function command(prompt){
+            if (prompt.startsWith("echo ")){
+                output(prompt.replace("echo ",""))
+            }
+            else if (prompt.startsWith("help")){
+                output(`
+HELP -> DISPLAY HELP PAGE
+ECHO <message: str> -> PRINT A MESSAGE
+PLAY <music-url: str/url> -> LISTEN AN AUDIO FILE BY ITS URL
+STOP-AUDIOPLAY -> STOP THE AUDIO
+OPEN <url> -> OPEN URL IN A NEW TAB
+DEV -> VIEW DEVELOPER PROFILE IN A NEW TAB
+EXIT -> QUIT TERMINAL
+SHUTDOWN -> SHUTDOWN SYSTEM
+`)
+            }
+            else if(prompt.startsWith("play")){
+                const music = new Audio(prompt.split(" ")[1])
+                music.play()
+            }
+            else if(prompt.startsWith("stop-audioplay")){
+                music.stop()
+            }
+            else if(prompt.startsWith("open")){
+                const url = prompt.split(" ")[1]
+                window.open(url,"_blank")
+            }
+            else if(prompt=="exit"){
+                document.getElementById("promptline").remove()
+            }
+            else if (prompt=="shutdown"){
+                window.close()
+            }
+            else if(prompt=="dev"){
+                window.open("https://hunter-zolomon.netlify.app","_blank")
+            }
+            else{
+                output(`Command Not Found: ${prompt}`)
+            }
+        }
+        function output(line){
+            document.getElementById('promptline').value += line
+            history.h += `\n${line}`
+            document.getElementById("promptline").value += "\nC:/Users/Hz/>"
+            history.h += "\nC:/Users/Hz/>"
+        }
+        function get_prompt(){
+            value = document.getElementById('promptline').value;
+            let last_ln = value.split("\n")
+            var _length = last_ln.length-1
+            last_line = last_ln[_length]
+            return last_line
+        }
+        window.onkeydown = (event)=>{
+            let prompt = get_prompt()
+            const content = document.getElementById("promptline").value
+            if (content.startsWith(history.h)){
+                console.log("")
+            }else{
+                document.getElementById("promptline").value = history.h
+            }
+            if (event.key=="Enter"){
+                var line = prompt.replace("C:/Users/Hz/>","")
+                setTimeout(()=>{command(line)},1000)
+            }
+        }
+        window.onload = ()=>{
+            setTimeout(()=>{
+                history.h = "C:/Users/Hz/>"
+                document.getElementById('promptline').value = "C:/Users/Hz/>"
+            },1000)
+        }
+    </script>
+</head>
+<body>
+    <textarea style="position: fixed; width: 100%; height: 100%; border: none; background: none; color: white; font: menu; font-size: 25px; z-index: 0;" rows="9999999999999999999" id="promptline"></textarea>
+</body>
+</html>
