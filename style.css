@@ -118,6 +118,9 @@ body{
         margin-top: 20px;
         margin-right: 10px
     }
+    .welcometext{
+        font-size: 24;
+    }
     .side1item{
         margin-top: 20px;
         font-size: 48;
@@ -168,6 +171,9 @@ body{
         margin-top: 15px;
         margin-right: 20px;
         font-size: 24;
+    }
+    .welcometext{
+        font-size: 30;
     }
     .side1item{
         font-size: 24;
@@ -314,7 +320,6 @@ body{
 .welcometext{
     color: white;
     text-shadow: 0 0 25px rgb(0, 255, 0);
-    font-size: 30;
     margin-top: 40px;
 }
 
