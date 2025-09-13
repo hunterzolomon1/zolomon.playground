@@ -91,6 +91,9 @@ body{
 
 
 @media screen and (max-width: 600px) {
+    body{
+        zoom: 80%;
+    }
     .side1openerline{
         width: 36px;
         height: 6px;
@@ -135,6 +138,9 @@ body{
     #aboutdiv{
         margin-left: 12%;
     }
+    #side1opener{
+        bottom: 10px;
+    }
 }
 @media screen and (min-width: 600px) {
     body, .page{
@@ -143,6 +149,9 @@ body{
         overflow-x: hidden;
         overflow-y: auto;
         scrollbar-width: none;
+    }
+    .alittleleft{
+        left: 20%;
     }
     .side1openerline{
         width: 24px;
@@ -180,6 +189,9 @@ body{
     }
     #juicesbox{
         width: 60%;
+    }
+    #side1opener{
+        top: 10px;
     }
 }
 
@@ -227,7 +239,6 @@ body{
 
 #side1opener{
     position: fixed;
-    top: 10px;
     left: 10px;
     z-index: 2;
     transition: transform 1s;
