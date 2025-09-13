@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Juice Shop</title>
+<link rel="shortcut icon" href="src/juices/purplejuice.png" type="image/x-icon">
+<script src="script.js"></script>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="side1opener">
+    <div class="side1openerline"></div>
+    <div class="side1openerline"></div>
+    <div class="side1openerline"></div>
+</div>
+
+
+<div style="font-family: milker; font-size: 48;" id="welcomeitem1">
+    <p class="randomchar1 welcometext">W</p>
+    <p class="randomchar2 welcometext">e</p>
+    <p class="randomchar3 welcometext">l</p>
+    <p class="randomchar4 welcometext">c</p>
+    <p class="randomchar1 welcometext">o</p>
+    <p class="randomchar2 welcometext">m</p>
+    <p class="randomchar3 welcometext">e</p>
+    <p class="randomchar4 welcometext">&nbsp;</p>
+    <p class="randomchar1 welcometext">t</p>
+    <p class="randomchar2 welcometext">o</p>
+    <p class="randomchar3 welcometext">&nbsp;</p>
+    <p class="randomchar4 welcometext">J</p>
+    <p class="randomchar1 welcometext">u</p>
+    <p class="randomchar2 welcometext">i</p>
+    <p class="randomchar3 welcometext">c</p>
+    <p class="randomchar4 welcometext">e</p>
+    <p class="randomchar1 welcometext">&nbsp;</p>
+    <p class="randomchar1 welcometext">s</p>
+    <p class="randomchar2 welcometext">h</p>
+    <p class="randomchar3 welcometext">o</p>
+    <p class="randomchar4 welcometext">p</p>
+</div>
+
+<img id="welcomeitem2" src="src/juices/purplejuice.png" style="width: auto; height: 400px; float: right;"><br>
+<button style="background-image: linear-gradient(to top, rgb(0, 59, 83), rgb(0, 102, 255)); float: left;" onclick="navigate('home')" id="welcomeitem0" class="buybutton welcomeitems">Take me home</button>
+
+<div id="side1">
+    <p onclick="navigate('home')" style="margin-top:80px;" class="side1item">Home</p>
+    <p onclick="navigate('search')" class="side1item">Juice Search</p>
+    <p onclick="window.open('index.html','_self')" class="side1item">Landing page</p>
+    <p onclick="navigate('profile')" class="side1item">Profile</p>
+    <p onclick="navigate('about')" class="side1item">About</p>
+</div>
+
+
+<div class="page" style="display: none;" id="home">
+    <div onclick="navigate('search')" style="position: sticky; left: 20%; border-top-right-radius: 0px;" class="popupbox">
+        chill with our cold juices at beach<br>
+        <img src="src/juices/kiwi juice.png" style="width: 200px; height: auto; position: absolute; bottom: 15px; right: 15px;">
+    </div>
+    <div onclick="navigate('search')" style="position: sticky;right: 20%; border-top-left-radius: 0px;" class="popupbox">
+        99% discount just for buying from us<br>
+        <img src="src/juices/lemon juice.png" style="width: 200px; height: auto; position: absolute; bottom: 15px; right: 15px;">
+    </div>
+    <div onclick="navigate('search')" style="position: sticky; left: 20%; border-top-right-radius: 0px;" class="popupbox">
+        <img src="src/juices/multiflavor juice.png" style="width: 200px; height: auto; position: absolute; bottom: 15px; right: 15px;">
+        Any flavor you like just search it up here
+    </div>
+</div>
+
+
+
+<div class="page" style="display: none;" id="search">
+    <input type="text" id="searchbox" placeholder="Search for juices ->">
+    <div id="juicesbox"></div>
+</div>
+
+
+
+<div class="page" style="display: none;" id="about">
+    <div id="aboutdiv">
+        nothing much here dude get out😒
+    </div>
+</div>
+
+
+
+<div class="page" style="display: none;" id="profile">
+    <div style="filter: invert(100%); width: 100; height: 100px; margin: 30px; background-image: url('src/person.png'); border-radius: 50px; background-size: cover; background-position: center center;">
+    <p style="font-family: milker; font-size: 48; transform: translatex(100px)">Admin</p>
+    <br><br><br><p style="font-family: milker; font-size: 24;">About</p>
+    <p style="font: menu; font-size: 16;">IDK... Just admin</p>
+</div>
+
+
+
+</body>
+</html>

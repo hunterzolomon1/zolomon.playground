@@ -1,48 +1,35 @@
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="storescript.js"></script>
-    <link rel="stylesheet" href="storestyle.css">
-    <link rel="stylesheet" href="mouse changer style.css">
-    <script src="mouse changer.js"></script>
-    <link rel="shortcut icon" href="https://img.icons8.com/?size=80&id=rGPimU4LglXL&format=png" type="image/x-icon">
-    <title>Zolomon Playground</title>
+<title>Welcome to juice shop</title>
+<link rel="shortcut icon" href="src/juices/purplejuice.png" type="image/x-icon">
+<link href="style.css" rel="stylesheet">
 </head>
-<body>
-    <div class="windows" id="windows">
-        <div class="desktop" id="desktop"></div>
-        <center><div id="centerstartmenu"></div></center>
-        <div class="taskbar">
-            <div class="tray">
-                <div class="datetime buttonhover">
-                    <center>
-                        <p style="font: menu; color: white; height: 5px;" id="time"></p>
-                        <p style="font: menu; color: white; height: 5px;" id="date"></p>
-                    </center>
-                </div>
-                <span></span>
-                <div style="filter: invert(100%);" class="trayicon buttonhover">
-                    <img src="https://img.icons8.com/?size=24&id=rOGbeYsOX8gR&format=png" style="position: absolute;top:10px;width: 25px;height: 25px;padding:2.5px">
-                </div>
-                <div style="filter: invert(100%);" class="trayicon buttonhover">
-                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-low-battery-icon-download-in-svg-png-gif-file-formats--charge-charging-iphonex-ios11-ios-11-ui-elements-vol-1-pack-user-interface-icons-474981.png?f=webp&w=256" style="position: absolute;top:10px;width: 25px;height: 25px;padding:2.5px">
-                </div>
-                <div style="filter: invert(100%);" class="trayicon buttonhover">
-                    <img src="https://win11.blueedge.me/img/icon/ui/audio3.png" style="position: absolute;top:10px;width: 25px;height: 25px;padding:2.5px">
-                </div>
-            </div>
-            <center>
-                <div class="taskbaricons">
-                    <button class="buttonhover taskbarapp startmenu" id="startmenubutton"></button>
-                    <button style="background-image: url('https://maps.google.com/favicon.ico');" class="buttonhover taskbarapp" onclick="create_window('https://google.com/webhp?igu=1','Google','https://maps.google.com/favicon.ico');notification('https://static.vecteezy.com/system/resources/previews/022/493/595/large_2x/3d-question-mark-icon-or-ask-faq-answer-solution-isolated-on-transparent-background-file-png.png','use `alt+arrow_left` and `alt+arrow_right` to navigate between previous and next page')"></button>
-                    <button style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png');" onclick="create_window('https://wikipedia.org','Wikipedia','https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png');notification('https://static.vecteezy.com/system/resources/previews/022/493/595/large_2x/3d-question-mark-icon-or-ask-faq-answer-solution-isolated-on-transparent-background-file-png.png','use `alt+arrow_left` and `alt+arrow_right` to navigate between previous and next page')" class="buttonhover taskbarapp"></button>
-                    <button style="background-image: url('https://emojiisland.com/cdn/shop/products/Lemon_Emoji_large.png?v=1571606034')" onclick="open_store()" class="buttonhover taskbarapp"></button>
-                    <button style="background-image: url('resources/mousecursorchangericon.png');" onclick="open_mouse_changer()" class="buttonhover taskbarapp"></button>
-                </div>
-            </center>
-            <div class="blurtaskbar"></div>
+<body id="landingpage">
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<div id="landingbg">
+    <br><br><br><br>
+    <center><p style="font-family: qilka; font-size: 48; color: white; text-shadow: 0 0 15px white;">View some of our juices here!</p></center>
+    <div class="landingjuices landingdiv">
+        <div class="landingjuicebox">
+            <center><img class="landingjuiceimage" src="src/juices/apple juice.png"><button class="buybutton" onclick="window.open('shop.html','_self')" style="margin: 50px;">0.99$ buy</button></center>
+        </div>
+        <div class="landingjuicebox">
+            <center><img class="landingjuiceimage" src="src/juices/mango juice.png"><button class="buybutton" onclick="window.open('shop.html','_self')" style="margin: 50px;">0.99$ buy</button></center>
+        </div>
+        <div class="landingjuicebox">
+            <center><img class="landingjuiceimage" src="src/juices/lemon juice.png"><button class="buybutton" onclick="window.open('shop.html','_self')" style="margin: 50px;">0.99$ buy</button></center>
+        </div>
+        <div class="landingjuicebox">
+            <center><img class="landingjuiceimage" src="src/juices/cherry juice.png"><button class="buybutton" onclick="window.open('shop.html','_self')" style="margin: 50px;">0.99$ buy</button></center>
         </div>
     </div>
+    <center><p style="font-family: qilka; font-size: 48; color: white; text-shadow: 0 0 15px white;">Click on any buy button above</p></center>
+</div>
+<div id="landingpagetopbar">
+    <img src="src/juices/purplejuice.png" style="width: auto; height: 80%; margin-left: 20px;">Welcome!
+
+    <a class="urllinks" style="float: right" href="https://instagram.com/daniel_00114">Instagram</a>
+    <a class="urllinks" style="float: right" href="https://youtube.com/@peers-hzw1">Youtube</a>
+</div>
 </body>
 </html>
